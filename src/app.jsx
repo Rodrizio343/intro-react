@@ -1,8 +1,11 @@
 import React from 'react'
 import { Header } from './shared/header/header'
+import { ThemeProvider } from 'styled-components';
+import { baseTheme } from './theme';
+
 export const App = () => {
     return (
-        <>
+        <ThemeProvider theme={baseTheme}>
             <Header />
             <main>
                 <contact>TITULO 1</contact>
@@ -10,6 +13,6 @@ export const App = () => {
                 <contact></contact>
                 <contact></contact>
             </main>
-        </>
+        </ThemeProvider>
     )
 }
